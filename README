@@ -1,0 +1,14 @@
+Code to create my desktop's widgets.
+Based on Quickshell, works best on Wayland.
+
+See also
+--------
+
+Qt Quick QML Language: https://doc.qt.io/qt-6/qtquick-qmlmodule.html
+Quickshell Documentation: https://quickshell.org/docs/v0.2.1/types
+
+Usage & Contribution
+--------------------
+
+If you find this shell interesting, feel free to use it.
+Contributions are welcomed.
