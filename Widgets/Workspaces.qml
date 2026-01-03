@@ -1,4 +1,3 @@
-pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Hyprland
@@ -6,36 +5,31 @@ import Quickshell.Hyprland
 import "../Components"
 
 Rectangle {
-    implicitWidth: Math.max(28, indicator.implicitWidth + 24)
+    implicitWidth: Math.max(28, indicators.implicitWidth + 24)
     implicitHeight: 28
     color: "#282c34"
     radius: 8
 
     RowLayout {
-        id: indicator
+        id: indicators
 
         anchors.centerIn: parent
         spacing: 8
 
         Repeater {
-            id: repeater
-
-            property list<HyprlandWorkspace> workspaces: Hyprland.workspaces.values
-
-            model: workspaces.length
+            model: Hyprland.workspaces.values
 
             DText {
-                required property int index
-                property HyprlandWorkspace workspace: repeater.workspaces[index]
+                required property HyprlandWorkspace modelData
 
-                text: workspace.id
-                color: workspace.focused ? "cyan" : "gray"
-                font.bold: workspace.focused
-
+                text: modelData?.id ?? ""
+                color: modelData?.focused ? "cyan" : "gray"
+                font.bold: modelData?.focused ?? false
+                
                 MouseArea {
                     anchors.fill: parent
                     cursorShape: Qt.PointingHandCursor
-                    onClicked: parent.workspace.activate()
+                    onClicked: parent.modelData?.activate()
                 }
             }
         }
