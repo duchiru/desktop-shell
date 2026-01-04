@@ -70,6 +70,8 @@ PanelWindow {
 
                 spacing: 8
 
+                Audio {}
+                Battery {}
                 Clock {}
             }
         }
