@@ -3,6 +3,7 @@ import QtQuick
 import "../Components"
 
 Rectangle {
+    id: archIconWidget
     implicitWidth: 28
     implicitHeight: 28
     color: "#282c34"

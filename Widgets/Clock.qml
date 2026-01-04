@@ -4,6 +4,7 @@ import Quickshell
 import "../Components"
 
 Rectangle {
+    id: clockWidget
     implicitWidth: Math.max(28, clock.implicitWidth + 24)
     implicitHeight: 28
     color: "#282c34"

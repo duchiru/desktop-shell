@@ -5,6 +5,7 @@ import Quickshell.Hyprland
 import "../Components"
 
 Rectangle {
+    id: workspacesWidget
     implicitWidth: Math.max(28, indicators.implicitWidth + 24)
     implicitHeight: 28
     color: "#282c34"
