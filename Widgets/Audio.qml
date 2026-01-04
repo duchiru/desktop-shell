@@ -11,8 +11,8 @@ Rectangle {
     implicitWidth: contentContainer.implicitWidth + 16
     implicitHeight: 28
 
-    property var audioSource: Pipewire.defaultAudioSource
-    property var audioSink: Pipewire.defaultAudioSink
+    property PwNode audioSource: Pipewire.defaultAudioSource
+    property PwNode audioSink: Pipewire.defaultAudioSink
 
     PwObjectTracker {
         objects: [audioWidget.audioSource, audioWidget.audioSink]

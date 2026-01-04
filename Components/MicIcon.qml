@@ -1,7 +1,8 @@
 import QtQuick
+import Quickshell.Services.Pipewire
 
 DText {
-    required property var source
+    required property PwNode source
 
     function getIcon(muted) {
         return muted ? "\udb80\udf6d" : "\udb80\udf6c";

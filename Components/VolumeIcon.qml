@@ -1,7 +1,8 @@
 import QtQuick
+import Quickshell.Services.Pipewire
 
 DText {
-    required property var sink
+    required property PwNode sink
     
     function getIcon(muted, volume) {
         if (muted) {
