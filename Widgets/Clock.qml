@@ -18,7 +18,13 @@ Rectangle {
         id: clock
 
         anchors.centerIn: parent
-        text: Qt.formatDateTime(systemClock.date, "hh:mm")
+        text: Qt.formatDateTime(systemClock.date, mouseArea.containsMouse ? "hh:mm:ss" : "hh:mm")
         color: "white"
+    }
+
+    MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+        hoverEnabled: true
     }
 }
