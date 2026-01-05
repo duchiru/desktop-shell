@@ -17,7 +17,7 @@ Rectangle {
         id: contentContainer
         anchors.fill: parent
         anchors.margins: 8
-        spacing: 4
+        spacing: 6
 
         BatteryIcon {
             powerDevice: batteryWidget.powerDevice
